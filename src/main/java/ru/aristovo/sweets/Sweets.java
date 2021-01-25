@@ -33,9 +33,9 @@ public abstract class Sweets {
     @Override
     public String toString() {
         return "Наименование: " + getName() +
-                "/tВес: " + getWeight() +
-                "/tЦена: " + getPrice() +
-                "/tДобавка: " + getFiller();
+                "\tВес: " + getWeight() +
+                "\tЦена: " + getPrice() +
+                "\tДобавка: " + getFiller();
     }
 
 }
