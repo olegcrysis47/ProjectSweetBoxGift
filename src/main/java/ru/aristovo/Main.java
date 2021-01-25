@@ -49,7 +49,10 @@ public class Main {
         gift.calcWeightBox();
         gift.viewSweet();
 
-
+        System.out.println("-----------------Удаляем по минимальной цене-----------------");
+        gift.minByPrice(0.450);
+        gift.calcWeightBox();
+        gift.viewSweet();
     }
 
 }
