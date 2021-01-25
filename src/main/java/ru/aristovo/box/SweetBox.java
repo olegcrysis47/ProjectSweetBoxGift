@@ -15,7 +15,7 @@ public interface SweetBox {
     public void calcWeightBox();
 
     //метод выводит стоимость коробки
-
+    public void calcPriceBox();
 
     //метод выводит информацию о сладостях, находящихся в коробке
     public void viewSweet();
