@@ -12,7 +12,7 @@ public interface SweetBox {
     public void removeSweet(int index);
 
     //метод выводит вес коробки
-
+    public void calcWeightBox();
 
     //метод выводит стоимость коробки
 
