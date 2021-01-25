@@ -9,7 +9,7 @@ public interface SweetBox {
     //public void addSweet(Sweets sweet, int quantity);
 
     //метод удаляет сладость из коробки по индексу
-
+    public void removeSweet(int index);
 
     //метод выводит вес коробки
 
