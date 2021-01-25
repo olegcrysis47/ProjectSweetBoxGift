@@ -53,6 +53,15 @@ public class Gift implements SweetBox {
     }
 
     @Override
+    public void calcPriceBox() {
+        double priceBox = 0;
+        for (Sweets sw : sweetsInGift) {
+            priceBox += sw.getWeight() * sw.getPrice();
+        }
+        System.out.println("Цена подарочной коробки = " + String.format("%.2f", priceBox) + " руб.");
+    }
+
+    @Override
     public void viewSweet() {
         System.out.println("В коробке содержится:");
         for (Sweets sw : sweetsInGift) {
