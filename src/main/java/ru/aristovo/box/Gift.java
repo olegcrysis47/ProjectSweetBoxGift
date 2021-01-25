@@ -6,4 +6,29 @@ public class Gift implements SweetBox {
 
     private Sweets[] sweetsInGift;
 
+    @Override
+    public void addSweet(Sweets sweet) {
+        if (sweetsInGift == null) {
+            sweetsInGift = new Sweets[1];
+            sweetsInGift[0] = sweet;
+        } else {
+            Sweets[] sw = new Sweets[sweetsInGift.length + 1];
+            for (int i = 0; i < sw.length; i++) {
+                if (i != sw.length-1) {
+                    sw[i] = sweetsInGift[i];
+                } else {
+                    sw[i] = sweet;
+                }
+            }
+            sweetsInGift = sw;
+        }
+    }
+
+    @Override
+    public void viewSweet() {
+        System.out.println("В коробке содержится:");
+        for (Sweets sw : sweetsInGift) {
+            System.out.println(sw);
+        }
+    }
 }
