@@ -27,6 +27,6 @@ public interface SweetBox {
     public void minByWeight(double maxWeight);
 
     //метод удаляет сладость с наименьшей ценой, если вес коробки превышает входящий (заявленный)
-
+    public void minByPrice(double maxWeight);
 
 }
