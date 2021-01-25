@@ -44,6 +44,15 @@ public class Gift implements SweetBox {
     }
 
     @Override
+    public void calcWeightBox() {
+        double weightBox = 0;
+        for (Sweets sw : sweetsInGift) {
+            weightBox += sw.getWeight();
+        }
+        System.out.println("Вес коробки = " + weightBox + " кг.");
+    }
+
+    @Override
     public void viewSweet() {
         System.out.println("В коробке содержится:");
         for (Sweets sw : sweetsInGift) {
