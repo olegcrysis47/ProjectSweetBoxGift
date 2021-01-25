@@ -14,6 +14,9 @@ public interface SweetBox {
     //метод выводит вес коробки
     public void calcWeightBox();
 
+    //дополнительный метод для возврата веса коробки
+    public double calcWeightBoxRet();
+
     //метод выводит стоимость коробки
     public void calcPriceBox();
 
@@ -21,7 +24,7 @@ public interface SweetBox {
     public void viewSweet();
 
     //метод удаляет сладость с наименьшим весом, если вес коробки превышает входящий (заявленный)
-
+    public void minByWeight(double maxWeight);
 
     //метод удаляет сладость с наименьшей ценой, если вес коробки превышает входящий (заявленный)
 
