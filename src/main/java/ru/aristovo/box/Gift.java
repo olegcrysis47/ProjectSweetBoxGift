@@ -53,6 +53,15 @@ public class Gift implements SweetBox {
     }
 
     @Override
+    public double calcWeightBoxRet() {
+        double weightBox = 0;
+        for (Sweets sw : sweetsInGift) {
+            weightBox += sw.getWeight();
+        }
+        return weightBox;
+    }
+
+    @Override
     public void calcPriceBox() {
         double priceBox = 0;
         for (Sweets sw : sweetsInGift) {
@@ -66,6 +75,21 @@ public class Gift implements SweetBox {
         System.out.println("В коробке содержится:");
         for (Sweets sw : sweetsInGift) {
             System.out.println(sw);
+        }
+    }
+
+    @Override
+    public void minByWeight(double maxWeight) {
+        while (calcWeightBoxRet() > maxWeight) {
+            int index = 0;
+            double minWeight = sweetsInGift[0].getWeight();
+            for (int i = 0; i < sweetsInGift.length; i++) {
+                if (minWeight > sweetsInGift[i].getWeight()) {
+                    minWeight = sweetsInGift[i].getWeight();
+                    index = i;
+                }
+            }
+            removeSweet(index);
         }
     }
 }
