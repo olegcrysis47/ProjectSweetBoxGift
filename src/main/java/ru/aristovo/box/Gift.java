@@ -92,4 +92,19 @@ public class Gift implements SweetBox {
             removeSweet(index);
         }
     }
+
+    @Override
+    public void minByPrice(double maxWeight) {
+        while (calcWeightBoxRet() > maxWeight) {
+            int index = 0;
+            double minPrice = sweetsInGift[0].getPrice();
+            for (int i = 0; i < sweetsInGift.length; i++) {
+                if (minPrice > sweetsInGift[i].getPrice()) {
+                    minPrice = sweetsInGift[i].getPrice();
+                    index = i;
+                }
+            }
+            removeSweet(index);
+        }
+    }
 }
